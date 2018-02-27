@@ -13,7 +13,7 @@ Cole Sheridan
 This assignment builds on lessons learned from the previous assignment, by asking students to create if/else statemebts in the javascript code to create a tax calculator that computes a person's taxes and their tax bracket depending on their income and status.
 
 ### View Project:
-
+https://cns17b.github.io/lesson5_javascript2/
 
 ### Lessons Learned in the Assignment:
 1. There are three types of loop statements, a while loop, a do/while loop, and a for loop.  A while loop is a pre-check loop that determines the truth value of a given condition before executing the loop, and continues to execute the loop until the condition is false.  If the condition is not true before running the loop one time, and the loop is a while loop, then the loop will not be executed by the program.  A do/while loop is a post-check loop that executes the code in the loop before checking the truth value of a determined condition and starting a new iteration of the loop (or not).  A do/while loop will execute at least once, even if the condition is false when the program first reaches the loop.  A for loop is often used when you know exactly how many times you want the loop to execute, as you define the parameters, conditions, and incriment on the same line you declare the loop.
