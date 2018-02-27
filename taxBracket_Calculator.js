@@ -78,9 +78,36 @@ function calculateTax(){
            
           else if(status == 1) {
                 //INSERT YOUR CODE BELOW
-  
-  
-  
+                // Computes tax for married couples filing jointly 
+                if (income <= 19050) {
+                    tax = income * 0.10;
+                    taxRate = 10;
+                }//end of nested if
+                else if (income <= 77400) {
+                    tax = (19050 * 0.10) + ((income - 19050) *0.12);
+                    taxRate = 12
+                }//end of nested if
+                else if (income <= 165000) {
+                    tax = (19050 * 0.10) + ((income - 19050) *0.22);
+                    taxRate = 22
+                }//end of nested if 
+                 else if (income <= 315000) {
+                    tax = (19050 * 0.10) + ((income - 19050) *0.24);
+                    taxRate = 24
+                }//end of nested if
+                else if (income <= 400000) {
+                    tax = (19050 * 0.10) + ((income - 19050) *0.32);
+                    taxRate = 32
+                }//end of nested if 
+                 else if (income <= 600000) {
+                    tax = (19050 * 0.10) + ((income - 19050) *0.35);
+                    taxRate = 35
+                }//end of nested if
+                else if (income >= 600001) {
+                    tax = (19050 * 0.10) + ((income - 19050) *0.37);
+                    taxRate = 37
+                }//end of nested if
+                
   
   
   
@@ -105,7 +132,35 @@ function calculateTax(){
                  
           else if(status == 2) {
                 //INSERT YOUR CODE BELOW
-
+                // Computes tax for married couples filing separately
+                if (income <= 9525) {
+                    tax = income * 0.10;
+                    taxRate = 10;
+                }//end of nested if
+                else if (income <= 38700) {
+                    tax = (9525 * 0.10) + ((income - 9525) *0.12);
+                    taxRate = 12
+                }//end of nested if
+                else if (income <= 82500) {
+                    tax = (9525 * 0.10) + ((income - 9525) *0.22);
+                    taxRate = 22
+                }//end of nested if 
+                 else if (income <= 157500) {
+                    tax = (9525 * 0.10) + ((income - 9525) *0.24);
+                    taxRate = 24
+                }//end of nested if
+                else if (income <= 200000) {
+                    tax = (9525 * 0.10) + ((income - 9525) *0.32);
+                    taxRate = 32
+                }//end of nested if 
+                 else if (income <= 300000) {
+                    tax = (9525 * 0.10) + ((income - 9525) *0.35);
+                    taxRate = 35
+                }//end of nested if
+                else if (income >= 300001) {
+                    tax = (9525 * 0.10) + ((income - 9525) *0.37);
+                    taxRate = 37
+                }//end of nested if
              
              
              
@@ -130,7 +185,35 @@ function calculateTax(){
           
           else if(status == 3) {
                 //INSERT YOUR CODE BELOW
- 
+                // Computes tax for the head of the household
+                if (income <= 13600) {
+                    tax = income * 0.10;
+                    taxRate = 10;
+                }//end of nested if
+                else if (income <= 51800) {
+                    tax = (13600 * 0.10) + ((income - 13600) *0.12);
+                    taxRate = 12
+                }//end of nested if
+                else if (income <= 82500) {
+                    tax = (13600 * 0.10) + ((income - 13600) *0.22);
+                    taxRate = 22
+                }//end of nested if 
+                 else if (income <= 157500) {
+                    tax = (13600 * 0.10) + ((income - 13600) *0.24);
+                    taxRate = 24
+                }//end of nested if
+                else if (income <= 200000) {
+                    tax = (13600 * 0.10) + ((income - 13600) *0.32);
+                    taxRate = 32
+                }//end of nested if 
+                 else if (income <= 500000) {
+                    tax = (13600 * 0.10) + ((income - 13600) *0.35);
+                    taxRate = 35
+                }//end of nested if
+                else if (income >= 500001) {
+                    tax = (13600 * 0.10) + ((income - 13600) *0.37);
+                    taxRate = 37
+                }//end of nested if
  
 
 
@@ -202,8 +285,10 @@ function clearButton () {
               
              //INSERT YOUR CODE BELOW
 
-
-
+              document.getElementById("taxEstimate").innerHTML = "";
+              
+              document.getElementById("taxBracket").innerHTML = "";
+              
 
 
 }//end of clearButton function
